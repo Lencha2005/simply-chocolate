@@ -20,12 +20,15 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header class="page-headr">
-      <div class="container">
+    <header class="page-header">
+      <div class="container page-header-container">
         <nav class="page-nav">
           <a class="logo" href="./index.html"
-            ><span class="text-italic">SIMPLY</span> CHOCOLATE</a
-          >
+            ><span class="text-italic">SIMPLY</span> CHOCOLATEX
+            <svg class="logo-icon" width="24" height="24">
+              <use href="./images/icons/icons.svg#chocolate"></use>
+            </svg>
+          </a>
           <ul class="menu-list">
             <li class="menu-item">
               <a class="menu-link" href="./index.html">Home</a>
@@ -38,6 +41,23 @@
             </li>
           </ul>
         </nav>
+
+        <ul class="social-list">
+          <li class="social-list-item">
+            <a href="" class="social-list-link">
+              <svg class="social-list-icon" width="24" height="24">
+                <use href="./images/icons/icons.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a href="" class="social-list-link">
+              <svg class="social-list-icon" width="24" height="24">
+                <use href="./images/icons/icons.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <main>
@@ -52,7 +72,14 @@
           <div class="hero-wrap">
             <button class="hero-btn" type="button">Buy now</button>
             <a class="how-made-link" href="#how-made">How it’s made</a>
-            <a class="scroll-down-link" href="#benefits">scroll down</a>
+            <a class="scroll-down-link" href="#benefits"
+              >scroll down
+              <span class="scroll-down-icon-wrapper">
+                <svg class="skroll-down-icon" width="22" height="22">
+                  <use href="./images/icons/icons.svg#scroll"></use>
+                </svg>
+              </span>
+            </a>
           </div>
         </div>
       </section>

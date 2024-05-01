@@ -51,21 +51,31 @@ color: #fd9222;
 
 /* ============ HEADER STYLES ============ */
 
-.page-headr {}
+
+.page-header-container {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+}
 
 .page-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-grow: 1;
 }
 
 .logo {
+    display: flex;
+    align-items: center;
         font-weight: 700;
         font-size: 18px;
         line-height: 1.11;
         letter-spacing: -0.03em;
        }
-
+.logo-icon {
+    margin-left: 4px;
+}
 .menu-list {
     display: flex;
     gap: 24px;
@@ -79,6 +89,7 @@ color: #fd9222;
         letter-spacing: -0.02em;
     padding-top: 30px;
     padding-bottom: 34px;
+    transition: color 250ms ease-in-out
 }
 
 .menu-link:hover,
@@ -86,17 +97,41 @@ color: #fd9222;
     color: #fd9222;
 }
 
+.social-list {
+    display: flex;
+    gap: 18px;
+}
+
+
+.social-list-link {
+    display: block;
+    line-height: 0;
+    stroke: #111111;
+    fill: none;
+transition: stroke 250ms ease-in-out;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+stroke: #fd9222;
+}
+ 
+
 /* ============ HERO STYLES ============ */
 
 .hero-section {
+
+    background-image: linear-gradient(rgba(30, 24, 35, 0.4), rgba(30, 24, 35, 0.4)), url(../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #1e1823;
     border-radius: 30px;
-        width: 1200px;
+        max-width: 1200px;
         height: 600px;
         margin-left: auto;
         margin-right: auto;
-     
-}
+}     
+
 
 .container-hero {
     padding-top: 381px;
@@ -157,18 +192,42 @@ color: #fd9222;
 }
 
 .scroll-down-link {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
     font-weight: 500;
         font-size: 14px;
         line-height: 1.29;
         letter-spacing: -0.03em;
         color: #ffffff;
         margin-left: auto;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .scroll-down-link:hover,
 .scroll-down-link:focus {
 color: #fd9222;
 }
+
+.scroll-down-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+        height: 38px;
+    background-color: #ffffff;
+    
+        border-radius: 50%;
+    fill: #fd9222;
+    transition: background-color 250ms linear, fill 250ms linear;
+    }
+.scroll-down-link:hover .scroll-down-icon-wrapper {
+    background-color: #fd9222;
+    fill: #ffffff;
+}
+
 
 /* ============ BENEFITS STYLES ============ */
 
