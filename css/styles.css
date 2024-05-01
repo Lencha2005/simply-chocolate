@@ -182,7 +182,8 @@ align-items: center;
             font-size: 14px;
             color: #ffffff;
             padding: 14px 40px;
-}
+            transition: background-color 250ms linear, fill 250ms linear;
+            }
 .how-made-link:hover,
 .how-made-link:focus {
 border-color: #fd9222;
@@ -251,7 +252,17 @@ color: #fd9222;
 .benefits-item {
     width: calc((100% - 140px) / 3);
 }
+.benefits-item-icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        margin-bottom: 22px;
 
+}
 .benefits-item-title {
     font-weight: 600;
         font-size: 18px;
@@ -309,6 +320,8 @@ color: #fd9222;
     border-radius: 15px;
     padding: 28px 32px;
 border: 1px solid #fd9222;
+position: relative;
+overflow: hidden;
 }
 
 .ingredients-list-img {
@@ -334,6 +347,56 @@ border: 1px solid #fd9222;
     background-color: #1e1823;
     color: #ffffff;
     border-color: #1e1823
+}
+
+.ingredients-overlay-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #ffffff;
+    color: #111111;
+    padding: 20px;
+    border-radius: 15px;
+       transform: translateY(100%);
+    transition: transform 250ms ease-in-out;
+}
+.ingredients-item:hover .ingredients-overlay-wrap {
+    transform: translateY(0%);
+}
+.ingredients-overlay-wrap-title {
+    font-weight: 600;
+        font-size: 18px;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+   }
+   .ingredients-overlay-wrap-list {
+    display: flex;
+    gap: 6px;
+       
+        margin-bottom: 14px;
+    }
+.ingredients-overlay-wrap-item {
+         font-size: 10px;
+        line-height: 1.2;
+border: 1px solid #fd9222;
+       border-radius: 35px;
+        padding: 6px 16px;
+}
+.ingredients-overlayitem-primary{
+background-color: #fd9222;
+color: #ffffff;
+}
+.ingredients-overlayitem-secondary {
+background-color: #fafafa;
+border: 1px solid #fd9222;
+}
+.ingredients-overlay-wrap-text {
+        line-height: 1.29;
+        letter-spacing: -0.02em;
 }
 
 /* ============ HOW MADE STYLES ============ */
@@ -455,6 +518,7 @@ margin-bottom: 24px;
 font-size: 18px;
         margin-left: auto;
         margin-right: auto;
+        transition: background-color 250ms ease-in-out;
 }
 
 .leave-review-btn:hover,
