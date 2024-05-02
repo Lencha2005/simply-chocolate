@@ -238,6 +238,7 @@ color: #fd9222;
     background-color: #1e1823;
     padding-top: 50px;
         padding-bottom: 50px;
+        color: #ffffff;
 }
 
 .benefits-container {
@@ -250,8 +251,22 @@ color: #fd9222;
 }
 
 .benefits-item {
+    position: relative;
     width: calc((100% - 140px) / 3);
 }
+
+.benefits-item:not(:last-child)::after {
+content: '';
+    position: absolute;
+top: 50%;
+right: -18px;
+background-color: #fafafa;
+height: 50%;
+width: 1px;
+transform: translateY(-50%);
+
+}
+
 .benefits-item-icon-wrap {
     display: flex;
     justify-content: center;
@@ -266,7 +281,7 @@ color: #fd9222;
 .benefits-item-title {
     font-weight: 600;
         font-size: 18px;
-        color: #ffffff;
+       
         margin-bottom: 18px;
 }
 
@@ -282,8 +297,6 @@ color: #fd9222;
     padding-top: 50px;
     padding-bottom: 50px;
 }
-
-.container {}
 
 .ingredients-title {
     width: 411px;
@@ -406,8 +419,6 @@ border: 1px solid #fd9222;
     padding-bottom: 50px;
 }
 
-.container {}
-
 .how-made-title {
     font-weight: 600;
         font-size: 24px;
@@ -446,10 +457,23 @@ padding: 32px;
           font-size: 14px;
         line-height: 1.29;
         letter-spacing: -0.02em;
+        position: relative;
+        padding-left: 16px;
     }
 
 .how-made-item:not(:last-child) {
 margin-bottom: 24px;
+}
+.how-made-item::before {
+    position: absolute;
+    content: '';
+top: 5px;
+left: 0;
+width: 8px;
+height: 8px;
+background-color: #4c4c4c;
+border-radius: 50%;
+border: 1px solid #eceded;;
 }
 
 /* ============ REVIEWS STYLES ============ */
@@ -476,6 +500,7 @@ margin-bottom: 24px;
 }
 
 .reviews-item {
+    position: relative;
     width: calc((100% - 56px) / 3);
     padding-top: 56px;
     padding-left: 24px;
@@ -488,7 +513,12 @@ margin-bottom: 24px;
 }
 
 .reviews-img {
-    margin-bottom: 18px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+
 }
 
 .reviews-nickname {
@@ -564,6 +594,7 @@ font-style: normal;
            font-size: 14px;
         line-height: 1.29;
         letter-spacing: -0.02em;
+        transition: color 250ms ease-in-out;
 }
 
 .contact-block-item:first-child {
@@ -575,9 +606,7 @@ font-style: normal;
     color: #fd9222;
 }
 
-.footer-nav {
-    padding-top: 24px;
-}
+
 
 .footer-nav-list {
         display: flex;
@@ -585,10 +614,13 @@ font-style: normal;
 }
 
 .footer-nav-link {
+    display: block;
+    padding: 24px 0;
     font-weight: 500;
         font-size: 14px;
         line-height: 1.14;
         letter-spacing: -0.02em;
+        transition: color 250ms ease-in-out;
 }
 
 .footer-nav-link:hover,
