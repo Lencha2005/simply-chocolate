@@ -89,7 +89,7 @@ color: #fd9222;
         letter-spacing: -0.02em;
     padding-top: 30px;
     padding-bottom: 34px;
-    transition: color 250ms ease-in-out
+    transition: color 250ms ease-in-out;
 }
 
 .menu-link:hover,
@@ -165,6 +165,7 @@ align-items: center;
             color: #ffffff;
             padding: 14px 40px;
             margin-right: 14px;
+            transition: background-color 250ms ease-in, color 250ms ease-in;
     }
 
         .hero-btn:hover,
@@ -182,8 +183,9 @@ align-items: center;
             font-size: 14px;
             color: #ffffff;
             padding: 14px 40px;
-            transition: background-color 250ms linear, fill 250ms linear;
+            transition: background-color 250ms ease-in-out, fill 250ms ease-in-out;
             }
+
 .how-made-link:hover,
 .how-made-link:focus {
 border-color: #fd9222;
@@ -203,8 +205,8 @@ color: #fd9222;
         letter-spacing: -0.03em;
         color: #ffffff;
         margin-left: auto;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: color 250ms ease-in-out,
+                background-color 250ms ease-in-out, fill 250ms ease-in-out;
 }
 
 .scroll-down-link:hover,
@@ -222,7 +224,7 @@ color: #fd9222;
     
         border-radius: 50%;
     fill: #fd9222;
-    transition: background-color 250ms linear, fill 250ms linear;
+    transition: background-color 250ms ease-in-out, fill 250ms ease-in-out;
     }
 .scroll-down-link:hover .scroll-down-icon-wrapper {
     background-color: #fd9222;
@@ -611,7 +613,7 @@ font-style: normal;
 .footer-nav-list {
         display: flex;
         gap: 24px;
-}
+      }
 
 .footer-nav-link {
     display: block;
@@ -626,4 +628,148 @@ font-style: normal;
 .footer-nav-link:hover,
 .footer-nav-link:focus {
 color: #fd9222;
+}
+.footer-bottom-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    
+}
+.footer-form {
+    display: flex;
+    gap: 8px;
+}
+.footer-form-input {
+    width: 313px;
+    height: 52px;
+    border: 1.50px solid rgba(255, 255, 255, 0.15);
+        border-radius: 30px;
+        padding: 13px 24px;
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0.3);
+     }
+.footer-form-input::placeholder {
+         font-size: 18px;
+        letter-spacing: -0.02em;
+        color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-form-input:focus {
+    border-color: #fd9222;
+    outline: transparent;
+}
+.footer-form-subscribe-btn {
+    font-weight: 600;
+        font-size: 14px;
+        color: #ffffff;
+    border-radius: 100px;
+        padding: 17px 40px;
+        min-width: 137px;
+        height: 52px;
+        background-color: #fd9222;
+        transition: background-color 250ms ease-in, color 250ms ease-in;
+        }
+        
+     
+.footer-form-subscribe-btn:hover,
+.footer-form-subscribe-btn:focus {
+    background-color: #fcf1e0;
+        color: #fd9222;
+}
+
+/* ============ BACKDROP STYLES ============ */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
+}
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+        width: 517px;
+        height: 794px;
+        background-color: #fafafa;
+        padding: 40px;
+
+}
+.modal-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+        line-height: 0;
+    padding: 0;
+    stroke: #111111;
+    background-color: transparent;
+    border: none;
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    stroke: #fd9222;
+}
+.modal-text {
+    width: 298px;
+    font-weight: 600;
+        font-size: 24px;
+        line-height: 1.17;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: #111111;
+        margin-bottom: 40px;
+}
+.modal-form-wrap {
+    margin-bottom: 18px;
+}
+.modal-form-label {
+    display: block;
+        font-size: 14px;
+        letter-spacing: -0.02em;
+        color: rgba(64, 64, 64, 0.3);
+        margin-bottom: 8px;
+}
+.modal-form-input {
+    width: 100%;
+    height: 68px;
+    border: 1px solid rgba(17, 17, 17, 0.05);
+        border-radius: 13px;
+        padding: 22px 24px;
+        background-color: transparent;
+        transition: border-color 250ms ease;
+     }
+.modal-form-input:focus {
+        border-color: #fd9222;
+        outline: transparent;
+     }
+.modal-form-massege {
+        width: 100%;
+        height: 137px;
+        resize: none;
+        background-color: transparent;
+        border: 1px solid rgba(17, 17, 17, 0.05);
+            border-radius: 13px;
+            padding: 22px 24px;
+            transition: border-color 250ms ease;
+    }
+.modal-form-massege:focus {
+        border-color: #fd9222;
+        outline: transparent;
+}
+.modal-form-massege::placeholder {
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    color: rgba(64, 64, 64, 0.3);
 }
