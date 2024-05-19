@@ -439,11 +439,269 @@ border-radius: 30px;
     }
     }
 
+/* ============ BENEFITS STYLES ============ */
+.benefits-page {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    background-color: #1e1823;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ffffff;
+}
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.benefits-item {
+    width: 308px;
+}
+.benefits-item-icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 22px;
+
+}
+.benefits-item-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+.benefits-item-text {
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.7);
+}
+@media screen and (min-width: 768px) {
+.benefits-page {
+margin-top: 40px;
+margin-bottom: 40px;
+    padding-top: 50px;
+        padding-bottom: 50px;
+}
+.benefits-container {
+    padding-right: 44px;
+}
+.benefits-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px 60px;
+}
+.benefits-item {
+        width: calc((100% - 60px) / 2);
+}
+
+}
+ @media screen and (min-width: 1168px) {
+    .benefits-page {
+    margin-top: 72px;
+    margin-bottom: 50px;
+       
+        }
+    .benefits-container {
+        padding: 0 34px;
+    }
+    .benefits-list {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 70px;
+        }
+    .benefits-item { 
+        position: relative;                  
+        width: calc((100% - 140px) / 3);
+    }
+    .benefits-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -18px;
+            background-color: #fafafa;
+            height: 50%;
+            width: 1px;
+            transform: translateY(-50%);
+    
+        }
+ }
+
+/* ============ INGREDIENTS STYLES ============ */
+.ingredients-page {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.ingredients-title {
+    width: 283px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+}
+.ingredients-text {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.ingredients-list {
+    display: flex;
+    flex-direction: column;
+        gap: 20px;
+}
+.ingredients-item {
+    width: 100%;
+    border-radius: 15px;
+    padding: 28px 55px 28px 56px;
+    border: 1px solid #fd9222;
+    position: relative;
+    overflow: hidden;
+}
+.ingredients-list-img {
+    margin-bottom: 25px;
+}
+
+.ingredients-list-text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+}
+.ingredients-item:nth-child(4n+1) {
+    color: #ffffff;
+    background-color: #fd9222
+}
+.ingredients-item:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.ingredients-item:nth-child(4n-1) {
+    background-color: #1e1823;
+    color: #ffffff;
+    border-color: #1e1823
+}
+.ingredients-overlay-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #ffffff;
+    color: #111111;
+    padding: 28px;
+    border-radius: 15px;
+    transform: translateY(100%);
+    transition: transform 250ms ease-in-out;
+}
+
+.ingredients-item:hover .ingredients-overlay-wrap {
+    transform: translateY(0%);
+}
+
+.ingredients-overlay-wrap-title {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.ingredients-overlay-wrap-list {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.ingredients-overlay-wrap-item {
+    font-size: 10px;
+    line-height: 1.2;
+    border: 1px solid #fd9222;
+    border-radius: 35px;
+    padding: 6px 16px;
+}
+
+.ingredients-overlayitem-primary {
+    background-color: #fd9222;
+    color: #ffffff;
+}
+
+.ingredients-overlayitem-secondary {
+    background-color: #fafafa;
+    border: 1px solid #fd9222;
+}
+
+.ingredients-overlay-wrap-text {
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+}
+@media screen and (min-width: 768px) {
+    .ingredients-page {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    
+        .ingredients-title {
+            width: 411px;
+            font-size: 24px;
+            line-height: 1.17;
+            margin-bottom: 28px;
+        }
+    
+        .ingredients-text {
+            width: 486px;
+            margin-bottom: 50px;
+        }
+    
+        .ingredients-list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+    
+        .ingredients-item {
+            width: calc((100% - 32px) / 2);
+            padding: 28px 56px;
+              }
+ 
+}
+
+ @media screen and (min-width: 1168px) {
+.ingredients-page {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+   .ingredients-list {
+    gap: 19px;
+   }
+   .ingredients-item {
+       width: calc((100% - 3 * 19px) / 4);
+       padding: 28px 36px 28px 28px;
+   }
+   .ingredients-list-img {
+    margin-bottom: 36px;
+}
+ }
+  
+
+ /* ============ HOW MADE STYLES ============ */
 
 
 
-
-
-        @media screen and (min-width: 768px) {}
+ 
+@media screen and (min-width: 768px) {}
     
         @media screen and (min-width: 1168px) {}

@@ -238,8 +238,8 @@ color: #fd9222;
     margin-top: 72px;
     margin-bottom: 50px;
     background-color: #1e1823;
-    padding-top: 50px;
-        padding-bottom: 50px;
+    padding-top: 20px;
+        padding-bottom: 20px;
         color: #ffffff;
 }
 
@@ -330,13 +330,14 @@ transform: translateY(-50%);
     gap: 19px;
 }
 
+
 .ingredients-item {
     width: calc((100% - 3 * 19px) / 4);
     border-radius: 15px;
     padding: 28px 32px;
-border: 1px solid #fd9222;
-position: relative;
-overflow: hidden;
+    border: 1px solid #fd9222;
+    position: relative;
+    overflow: hidden;
 }
 
 .ingredients-list-img {
