@@ -567,6 +567,8 @@ margin-bottom: 40px;
     overflow: hidden;
 }
 .ingredients-list-img {
+    width: 224px;
+    height: 171px;
     margin-bottom: 25px;
 }
 
@@ -692,6 +694,8 @@ margin-bottom: 40px;
        padding: 28px 36px 28px 28px;
    }
    .ingredients-list-img {
+    width: 206px;
+    height: 160px;
     margin-bottom: 36px;
 }
  }
@@ -701,7 +705,7 @@ margin-bottom: 40px;
 
 
 
- 
+
 @media screen and (min-width: 768px) {}
     
         @media screen and (min-width: 1168px) {}
